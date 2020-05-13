@@ -1,0 +1,134 @@
+{
+
+  /*******************
+   * VSCode Settings *
+   *******************/
+
+  /* Editor format Settings */
+
+  "editor.tabSize": 2,
+  "editor.autoIndent": "full",
+  "editor.insertSpaces": true,
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": false,
+  "editor.renderWhitespace": "boundary",
+  "editor.wordWrapColumn": 80,
+  "editor.wordWrap": "off",
+  "editor.detectIndentation": true,
+  "editor.rulers": [
+    80
+  ],
+
+  /* Diff editor format Settings */
+
+  "diffEditor.ignoreTrimWhitespace": false,
+
+  /* Keyboard Settings */
+
+  "keyboard.dispatch": "keyCode",
+
+  /* Window Settings */
+
+  "window.zoomLevel": 0,
+
+  /* VSCode Workbench Settings */
+
+  "workbench.colorTheme": "NightLight",
+  "workbench.statusBar.visible": false,
+  "workbench.colorCustomizations": {
+    "activityBar.activeBorder": "#4287f5",
+    "activityBar.activeBackground": "#1f3351"
+  },
+  "workbench.startupEditor": "newUntitledFile",
+  "workbench.editor.limit.enabled": true,
+  "workbench.editor.limit.value": 6,
+
+  /* VSCode Workspace File Settings */
+
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+
+  // File exclusions.
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/**": true,
+    "**/vendor/**": true
+  },
+
+  // Set Default language to PHP.
+  "files.defaultLanguage": "PHP",
+
+  // File associations.
+  "files.associations": {
+    // PHP File associations.
+    "*.inc": "php",
+    "*.module": "php",
+    "*.install": "php",
+    "*.theme": "php",
+    "*.tpl.php": "php",
+    "*.test": "php",
+    "*.php": "php"
+  },
+
+  /* Bread crumb Settings */
+
+  // Enable breadcrumbs.
+  "breadcrumbs.enabled": true,
+
+  /* Telementry Settings */
+
+  // Disable telementry.
+  "telemetry.enableTelemetry": false,
+
+  /* HTML format Settings */
+
+  "html.format.enable": true,
+  "html.format.wrapLineLength": 80,
+
+  /* CSS Settings */
+
+  "css.validate": true,
+
+  /*******************
+   * Module Settings *
+   *******************/
+
+  /* PHP Intelephense */
+
+  // Disable intelephense auto formatting.
+  "intelephense.format.enable": false,
+  // Disable intelephense undefined symbol diagnostics.
+  "intelephense.diagnostics.undefinedSymbols": false,
+  // Disable intelephense undefined type diagnostics.
+  "intelephense.diagnostics.undefinedTypes": false,
+  // Disable intelephense undefined type diagnostics.
+  "intelephense.diagnostics.undefinedFunctions": false,
+  // Disable intelephense undefined type diagnostics.
+  "intelephense.diagnostics.undefinedMethods": false,
+
+  /* PHP Code Sniffer Settings */
+
+  "phpcs.autoConfigSearch": false,
+  "phpcs.executablePath": "/home/clayton/.composer-phpcs/vendor/bin/phpcs",
+  "phpcs.standard": "Drupal",
+
+  /* Empty Indent Settings */
+
+  "emptyIndent.removeIndent": true,
+  "emptyIndent.highlightColor": "rgba(246,36,89,0.6)",
+
+  /* VSDocBlockr Settings */
+
+  "vs-docblockr.commentStyle": "drupal",
+  "vs-docblockr.columnSpacing": 1,
+
+  /* PHP DocBlocker Settings */
+
+  "php-docblocker.returnGap": true,
+
+  /* Emmet Settings */
+
+  // Never expand emmet abbreviations.
+  "emmet.showExpandedAbbreviation": "never"
+}
