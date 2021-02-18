@@ -1,0 +1,49 @@
+name: new_project
+recipe: laravel
+config:
+  php: 7.4
+  via: apache:2.4
+  webroot: public
+  cache: redis
+  xdebug: true
+
+### Docker Service Routes
+proxy:
+  ## PHP App Server Service Route
+  appserver: ['new_project.lndo.site']
+  ## Mailer Service Route
+  mail: ['mail.new_project.lndo.site']
+
+### Docker Services
+services:
+  ## MySQL Database Service Container
+  database:
+    type: mysql:8.0
+  ## Mailer Service Container
+  mail:
+    type: mailhog
+    hogfrom: ['appserver']
+  ## Node Service Container
+  node:
+    type: node:10.19
+
+## Lando Tooling (e.g. custom commands for various service containers)
+tooling:
+  art:
+    service: appserver
+    description: "Runs artisan commands"
+    cmd: "php artisan"
+  node:
+    service: node
+  npm:
+    service: node
+  redis:
+    service: cache
+    description: "Runs redis-cli commands"
+    cmd: "redis-cli"
+  deploy:
+    service: appserver
+    description: "Notify user that Laravel Deployer must be run outside of a container."
+    cmd:
+      - echo "Laravel Deployer must be run outside of a container!"
+      - echo "Please use the command `php artisan deploy` within your local environment."
